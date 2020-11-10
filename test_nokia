@@ -1,0 +1,18 @@
+def test():
+    number = 21780
+    number_rv = 19602
+    percentage = 90
+    while percentage < 99:
+         number = number+1
+         listToStr = ' '.join([str(elem) for elem in list(str(number))[::-1]])
+         listToStr2 = ' '.join([str(elem) for elem in sorted(str(number))])
+         if listToStr2 == str(number):
+             number_rv = number_rv
+         elif listToStr2 == listToStr:
+             number_rv = number_rv
+         else:
+             number_rv = number_rv +1
+
+         percentage = (number_rv * 100) / number
+
+    print(f'Hi, {number} {percentage} {number_rv}  ')
